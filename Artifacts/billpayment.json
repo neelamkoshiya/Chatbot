@@ -1,0 +1,22 @@
+{
+  "messageVersion": "1.0",
+  "invocationSource": "DialogCodeHook",
+  "userId": "John",
+  "sessionAttributes": {},
+  "bot": {
+    "name": "PayMyBill",
+    "alias": "$LATEST",
+    "version": "$LATEST"
+  },
+  "outputDialogMode": "Text",
+  "currentIntent": {
+    "name": "billpayment",
+    "slots": {
+      "AccountID": "1234",
+      "PaymentMethod": "Boa",
+      "PaymentAmount": "100",
+      "Acknowledgement": "yes"
+    },
+    "confirmationStatus": "None"
+  }
+}

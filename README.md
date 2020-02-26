@@ -71,7 +71,7 @@ Open the role and click attach policy and attach role for DynamoDB and SNS
 
 ![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.16.09%20PM.png)
 
-You can copy the code [github](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Lambda/CustomerChatBot.py)
+You can copy the code [CustomerChatBot.py](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Lambda/CustomerChatBot.py)
 
 The lambda function will act as the logic layer and orchestrator for the chatbot. It will interact with Lex, SNS and Dynamo DB in this example. However in the real world, it would interact/invoke  multiple APIs in order to fulfill the business requirement and functionality.
 

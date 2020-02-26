@@ -65,6 +65,8 @@ You should see an entry for the customer with AccountID 1234.
 In the search bar of the console, type Lambda
 
  Create a new Lambda function. Name it "CustomerChatBot" and select the run time as python 3.7. In the IAM role option, you can select create a new role. 
+ ![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-26%20at%206.38.50%20AM.png)
+ 
 Once function is created, scroll down to tha role and ensure the function has right to write/read DynamoDB and access to SNS to send out notification.
 ![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.15.46%20PM.png)
 Open the role and click attach policy and attach role for DynamoDB and SNS
@@ -72,6 +74,9 @@ Open the role and click attach policy and attach role for DynamoDB and SNS
 ![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.16.09%20PM.png)
 
 You can copy the code [CustomerChatBot.py](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Lambda/CustomerChatBot.py)
+
+Ensure you change the memory and timeout settings
+![](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-26%20at%206.46.20%20AM.png)
 
 The lambda function will act as the logic layer and orchestrator for the chatbot. It will interact with Lex, SNS and Dynamo DB in this example. However in the real world, it would interact/invoke  multiple APIs in order to fulfill the business requirement and functionality.
 

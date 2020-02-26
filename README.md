@@ -32,26 +32,65 @@ Amazon Simple Notification Service (SNS) is a highly available, durable, secure,
 Login into your AWS account.In the search bar of the console, type Dynamodb.
 
 Click "create table"
-
+![Alt Text](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.07.31%20PM.png)
 Type in the name of the table Customer and key as AccountID. Click on the create table button. 
-
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.07.50%20PM.png)
 Once the table is created, click "create item". In the left drop down, select "Text" and copy the payload from here. Now click "Save". 
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.09.23%20PM.png)
+
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.09.38%20PM.png)
 
 You should see an entry for the customer with AccountID 1234.
+
+```
+{
+  "AccountID": "1234",
+  "BillAmount": "200",
+  "BillDueDate": "3/5/2020",
+  "CustomerCategory": "Residential",
+  "CustomerName": "John Doe",
+  "InternetCharge": "100",
+  "PaymentMethod": "My Preferred Credit Card",
+  "PreviousBalance": "0",
+  "SubscriptionID": "XXX-ee4e-4806-XXX-63b101XXX",
+  "SystemID": "S123",
+  "SystemLastRebooted": "02/25/2020, 18:03:14",
+  "TaxandFee": "50",
+  "TelevisionCharge": "50",
+  "TotalBalanceAmount": "200"
+}
+```
 
 #### 2) Lambda function creation
 In the search bar of the console, type Lambda
 
- Create a new Lambda function. Name it "CustomerChatBot" and select the run time as python 3.7
-Once function is created, ensure the function has right to write/read DynamoDB and access to SNS to send out notification.
+ Create a new Lambda function. Name it "CustomerChatBot" and select the run time as python 3.7. In the IAM role option, you can select create a new role. 
+Once function is created, scroll down to tha role and ensure the function has right to write/read DynamoDB and access to SNS to send out notification.
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.15.46%20PM.png)
+Open the role and click attach policy and attach role for DynamoDB and SNS
+
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.16.09%20PM.png)
+
+You can copy the code [github](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Lambda/CustomerChatBot.py)
 
 The lambda function will act as the logic layer and orchestrator for the chatbot. It will interact with Lex, SNS and Dynamo DB in this example. However in the real world, it would interact/invoke  multiple APIs in order to fulfill the business requirement and functionality.
 
 #### 3) SNS topic creation
 In the search bar of the console, type SNS
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.12.46%20PM.png)
 Create a new topic. Name it CustomerPaymentNotification, keep all default and hit "Create". Once the topic is created note down the topic ARN.
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.13.17%20PM.png)
 
 Go to Lambda fucntion and Create environmental variable - SNS_TOPIC and copy the ARN which you had copied.
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.13.39%20PM%201.png)
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.15.03%20PM%201.png)
+
+Scroll down below the topic for subscription and add subscriber with your phone number 
+
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.13.49%20PM.png)
+
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.14.07%20PM%202.png)
+
 
 
 ## "Pay my bill" Chatbot

@@ -11,6 +11,9 @@ We are assuming the system is a telecommincation device at customer's household 
 
 Well, without further ado, lets begin.
 
+Here is the architecture diagram:
+!(Alt Txt)[https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/CharterWorkshop.jpg]
+
 ## Pre-requisite
 
 #### 1) Dynamo DB - Customer Table

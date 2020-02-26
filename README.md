@@ -88,7 +88,7 @@ Create a new topic. Name it CustomerPaymentNotification, keep all default and hi
 
 Go to Lambda fucntion and Create environmental variable - SNS_TOPIC and copy the ARN which you had copied.
 ![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.13.39%20PM%201.png)
-![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.15.03%20PM%201.png)
+![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-26%20at%208.42.51%20AM.png)
 
 Scroll down below the topic for subscription and add subscriber with your phone number 
 
@@ -97,8 +97,11 @@ Scroll down below the topic for subscription and add subscriber with your phone 
 ![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.14.07%20PM%202.png)
 
 
-
-## "Pay my bill" Chatbot
+There are two workshops:
 
 ## "Reboot my system" Chatbot
+[Reboot my system](https://github.com/neelamkoshiya/Chatbot/tree/master/RebootSystem)
+
+## "Pay my bill" Chatbot
+[Customer Bill](https://github.com/neelamkoshiya/Chatbot/blob/master/PayMyBillChatBot)
 

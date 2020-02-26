@@ -108,7 +108,7 @@ def isvalid_date(date):
 def billinquiry(intent_request):
    
     dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
-    table = dynamodb.Table('CustomerBill')
+    table = dynamodb.Table('Customer')
     AccountID=get_slots(intent_request)["AccountID"]
    
 
@@ -127,7 +127,7 @@ def billinquiry(intent_request):
 def billpayment(intent_request):
    
     dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
-    table = dynamodb.Table('CustomerBill')
+    table = dynamodb.Table('Customer')
     AccountID=get_slots(intent_request)["AccountID"]
     PaymentMethod=get_slots(intent_request)["PaymentMethod"]
     PaymentAmount=get_slots(intent_request)["PaymentAmount"]
@@ -150,7 +150,7 @@ def billpayment(intent_request):
 def rebootsystem(intent_request):
    
     dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
-    table = dynamodb.Table('CustomerBill')
+    table = dynamodb.Table('Customer')
     AccountID=get_slots(intent_request)["AccountID"]
     Acknowledgement=get_slots(intent_request)["Acknowledgement"]
     #You can call your reboot api here

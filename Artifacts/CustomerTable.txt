@@ -1,0 +1,16 @@
+{
+  "AccountID": "1234",
+  "BillAmount": "200",
+  "BillDueDate": "3/5/2020",
+  "CustomerCategory": "Residential",
+  "CustomerName": "Neelam Koshiya",
+  "InternetCharge": "100",
+  "PaymentMethod": "My Preferred Credit Card",
+  "PreviousBalance": "0",
+  "SubscriptionID": "d0f6af9a-ee4e-4806-8219-63b101c4a62b",
+  "SystemID": "S123",
+  "SystemLastRebooted": "02/25/2020, 18:03:14",
+  "TaxandFee": "50",
+  "TelevisionCharge": "50",
+  "TotalBalanceAmount": "200"
+}

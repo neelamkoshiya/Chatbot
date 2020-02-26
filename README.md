@@ -31,7 +31,7 @@ Amazon Simple Notification Service (SNS) is a highly available, durable, secure,
 We will first work to create the backend of the application. We are leveraging lambda to orchestrate the flow and pull the customer data from dynamo DB table. We are leveraging SNS for customer notification
 
 #### 1) Dynamo DB - Customer Table
-Login into your AWS account.In the search bar of the console, type Dynamodb.
+Login into your AWS account. Please ensure you perform the lab in us-east-1 region(Virginia) only and the lab is case sensitive so ensure the case is correct for the name of the table and chat bot intent. In the search bar of the console, type Dynamodb.
 
 Click "create table"
 ![Alt Text](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.07.31%20PM.png)
@@ -98,6 +98,21 @@ Scroll down below the topic for subscription and add subscriber with your phone 
 
 ![alt](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-25%20at%204.14.07%20PM%202.png)
 
+
+#### 4) Testing the Lambda function.
+At the top right corner of the lambda function, you will notice a test button. Click on it. We will be running 3 test case with three different inputs which is invoked later in chatbot. 
+
+Click on configure test, paste the test data as in 1) and create test case. Then in the lambda function select that test case from the drop down and run the test. Repeat it for 2) and 3) mentioned below.
+
+![](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-26%20at%203.07.34%20PM.png)
+
+![](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/Screen%20Shot%202020-02-26%20at%203.07.21%20PM.png)
+
+1) Reboot test data : [reboot test data] (https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/reboot-test-data.json)
+
+2) Customer bill inquiry: [Bill inquiry data](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/BillInquiry.json)
+
+3) Customer payment : [bill payment test data](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/billpayment.json)
 
 There are two workshops:
 

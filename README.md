@@ -14,7 +14,7 @@ Well, without further ado, lets begin.
 ## Architecture Flow
 
 Here is the architecture diagram:
-![Arch diagram](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/CharterWorkshop.jpg)
+![Arch diagram](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/CharterWorkshop-arch.jpg)
 
 ### About the AWS services used
 

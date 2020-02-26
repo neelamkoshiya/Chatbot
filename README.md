@@ -28,6 +28,8 @@ Amazon Simple Notification Service (SNS) is a highly available, durable, secure,
 
 ## Pre-requisite
 
+We will first work to create the backend of the application. We are leveraging lambda to orchestrate the flow and pull the customer data from dynamo DB table. We are leveraging SNS for customer notification
+
 #### 1) Dynamo DB - Customer Table
 Login into your AWS account.In the search bar of the console, type Dynamodb.
 

@@ -7,7 +7,7 @@
   "InternetCharge": "100",
   "PaymentMethod": "My Preferred Credit Card",
   "PreviousBalance": "0",
-  "SubscriptionID": "d0f6af9a-ee4e-4806-8219-63b101c4a62b",
+  "SubscriptionID": "XXX-ee4e-4806-XXX-63b101XXX",
   "SystemID": "S123",
   "SystemLastRebooted": "02/25/2020, 18:03:14",
   "TaxandFee": "50",

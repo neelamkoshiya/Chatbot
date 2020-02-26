@@ -11,8 +11,20 @@ We are assuming the system is a telecommincation device at customer's household 
 
 Well, without further ado, lets begin.
 
+## Architecture Flow
+
 Here is the architecture diagram:
 ![Arch diagram](https://github.com/neelamkoshiya/Chatbot/blob/master/Artifacts/Images/CharterWorkshop.jpg)
+
+### About the AWS services used
+
+Amazon Lex is a service for building conversational interfaces into any application using voice and text. Amazon Lex provides the advanced deep learning functionalities of automatic speech recognition (ASR) for converting speech to text, and natural language understanding (NLU) to recognize the intent of the text, to enable you to build applications with highly engaging user experiences and lifelike conversational interactions. 
+
+AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume.
+
+Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multiregion, multimaster, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. 
+
+Amazon Simple Notification Service (SNS) is a highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications.
 
 ## Pre-requisite
 
